@@ -1,24 +1,24 @@
 <template>
   <div id="root">
     <div :class="cssClasses">
-      <component
-        :is="$route.meta.layout"
+      <SideNavOuterToolbar
         :title="title"
         :is-x-small="screen.getScreenSizeInfo.isXSmall"
         :is-large="screen.getScreenSizeInfo.isLarge"
       >
       <div class="content">
-        <router-view></router-view>
+        Hello World
       </div>
         <template #footer>
           <app-footer />
         </template>
-      </component>
+      </SideNavOuterToolbar>
     </div>
   </div>
 </template>
 
 <script>
+import SideNavOuterToolbar from "./layouts/side-nav-outer-toolbar";
 import AppFooter from "./components/app-footer";
 import { sizes, subscribe, unsubscribe } from "./utils/media-query";
 import {
@@ -41,7 +41,8 @@ function getScreenSizeInfo() {
 
 export default {
   components: {
-    AppFooter
+    AppFooter,
+    SankeyChart,
   },
   setup() {
     const vm = getCurrentInstance();

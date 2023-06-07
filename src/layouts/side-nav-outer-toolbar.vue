@@ -6,41 +6,20 @@
       :toggle-menu-func="toggleMenu"
       :title="title"
     />
-    <dx-drawer
-      class="layout-body"
-      position="before"
-      template="menuTemplate"
-      v-model:opened="menuOpened"
-      :opened-state-mode="drawerOptions.menuMode"
-      :reveal-mode="drawerOptions.menuRevealMode"
-      :min-size="drawerOptions.minMenuSize"
-      :max-size="drawerOptions.maxMenuSize"
-      :shading="drawerOptions.shaderEnabled"
-      :close-on-outside-click="drawerOptions.closeOnOutsideClick"
-    >
       <dx-scroll-view ref="scrollViewRef" class="with-footer">
         <slot />
         <slot name="footer" />
       </dx-scroll-view>
-      <template #menuTemplate>
-        <side-nav-menu
-          :compact-mode="!menuOpened"
-          @click="handleSideBarClick"
-        />
-      </template>
-    </dx-drawer>
   </div>
 </template>
 
 <script>
-import DxDrawer from "devextreme-vue/drawer";
 import DxScrollView from "devextreme-vue/scroll-view";
 
 import menuItems from "../app-navigation";
 import HeaderToolbar from "../components/header-toolbar";
-import SideNavMenu from "../components/side-nav-menu";
 import { computed, ref, watch} from 'vue';
-import { useRoute } from 'vue-router';
+
 
 export default {
   props: {
@@ -49,8 +28,6 @@ export default {
     isLarge: Boolean
   },
   setup(props) {
-    const route = useRoute();
-
     const scrollViewRef = ref(null);
     const menuOpened = ref(props.isLarge);
     const menuTemporaryOpened = ref(false);
@@ -92,16 +69,6 @@ export default {
         }
     });
 
-    watch(
-      () => route.path,
-      () => {
-        if (menuTemporaryOpened.value || !props.isLarge) {
-          menuOpened.value = false;
-          menuTemporaryOpened.value = false;
-        }
-      scrollViewRef.value.instance.scrollTo(0);
-      }
-    );
 
     return {
       menuOpened,
@@ -113,10 +80,8 @@ export default {
     };
   },
   components: {
-    DxDrawer,
     DxScrollView,
-    HeaderToolbar,
-    SideNavMenu
+    HeaderToolbar
   }
 };
 </script>

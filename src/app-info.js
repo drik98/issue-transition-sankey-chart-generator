@@ -1,3 +1,3 @@
 export default {
-  title: "Simple Sankey Chart Generator"
+  title: "Issue Transition Sankey Chart Generator",
 };

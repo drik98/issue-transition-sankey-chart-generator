@@ -1,5 +1,5 @@
 {
-  "name": "simple-sankey-chart-generator",
+  "name": "issue-transition-sankey-chart-generator",
   "version": "0.1.0",
   "private": true,
   "scripts": {

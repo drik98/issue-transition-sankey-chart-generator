@@ -230,13 +230,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-html,
-body {
-  margin: 0px;
-  min-height: 100%;
-  height: 100%;
-}
-
 #root {
   height: 100%;
 }

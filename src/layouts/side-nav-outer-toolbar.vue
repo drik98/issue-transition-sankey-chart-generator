@@ -70,7 +70,6 @@ export default {
 
     return {
       menuOpened,
-
       toggleMenu,
       handleSideBarClick,
       drawerOptions,
@@ -84,7 +83,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .side-nav-outer-toolbar {
   flex-direction: column;
   display: flex;

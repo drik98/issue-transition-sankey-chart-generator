@@ -26,6 +26,7 @@ export default {
 };
 </script>
 
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
 <style lang="scss">
 @import "../themes/generated/variables.base.scss";
 @import "../dx-styles.scss";
@@ -36,8 +37,7 @@ export default {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.header-title .dx-item-content {
-  padding: 0 1rem;
-  margin: 0;
+.header-title {
+  padding-left: 1em !important;
 }
 </style>

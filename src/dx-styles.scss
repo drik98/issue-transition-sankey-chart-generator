@@ -1,10 +1,26 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
 .content {
   line-height: 1.5;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-box {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2em;
+  margin: 2em 1em;
+  width: 100%;
 
   h2 {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 20px;
   }
 }
@@ -21,7 +37,7 @@
 }
 
 .side-nav-outer-toolbar .dx-drawer {
-  height: calc(100% - 56px)
+  height: calc(100% - 56px);
 }
 
 .content-block {
@@ -51,8 +67,10 @@
   border-left: 0;
 }
 
-.with-footer > .dx-scrollable-wrapper >
-.dx-scrollable-container > .dx-scrollable-content {
+.with-footer
+  > .dx-scrollable-wrapper
+  > .dx-scrollable-container
+  > .dx-scrollable-content {
   height: 100%;
 
   & > .dx-scrollview-content {
@@ -64,6 +82,6 @@
 
 #app {
   height: 100%;
- }
+}
 
 $side-panel-min-width: 60px;

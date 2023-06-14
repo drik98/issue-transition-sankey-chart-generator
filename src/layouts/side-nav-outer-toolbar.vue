@@ -6,26 +6,24 @@
       :toggle-menu-func="toggleMenu"
       :title="title"
     />
-      <dx-scroll-view ref="scrollViewRef" class="with-footer">
-        <slot />
-        <slot name="footer" />
-      </dx-scroll-view>
+    <dx-scroll-view ref="scrollViewRef" class="with-footer">
+      <slot />
+      <slot name="footer" />
+    </dx-scroll-view>
   </div>
 </template>
 
 <script>
 import DxScrollView from "devextreme-vue/scroll-view";
 
-import menuItems from "../app-navigation";
 import HeaderToolbar from "../components/header-toolbar";
-import { computed, ref, watch} from 'vue';
-
+import { computed, ref, watch } from "vue";
 
 export default {
   props: {
     title: String,
     isXSmall: Boolean,
-    isLarge: Boolean
+    isLarge: Boolean,
   },
   setup(props) {
     const scrollViewRef = ref(null);
@@ -57,7 +55,7 @@ export default {
         minMenuSize: props.isXSmall ? 0 : 60,
         maxMenuSize: props.isXSmall ? 250 : undefined,
         closeOnOutsideClick: shaderEnabled,
-        shaderEnabled
+        shaderEnabled,
       };
     });
 
@@ -67,22 +65,22 @@ export default {
         if (!menuTemporaryOpened.value) {
           menuOpened.value = props.isLarge;
         }
-    });
-
+      }
+    );
 
     return {
       menuOpened,
-      menuItems,
+
       toggleMenu,
       handleSideBarClick,
       drawerOptions,
-      scrollViewRef
+      scrollViewRef,
     };
   },
   components: {
     DxScrollView,
-    HeaderToolbar
-  }
+    HeaderToolbar,
+  },
 };
 </script>
 

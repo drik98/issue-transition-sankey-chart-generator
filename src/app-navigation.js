@@ -2,7 +2,7 @@ export default [
   {
     text: "Home",
     path: "/home",
-    icon: "home"
+    icon: "home",
   },
   {
     text: "Examples",
@@ -10,12 +10,12 @@ export default [
     items: [
       {
         text: "Profile",
-        path: "/profile"
+        path: "/profile",
       },
       {
         text: "Tasks",
-        path: "/tasks"
-      }
-    ]
-  }
-  ];
+        path: "/tasks",
+      },
+    ],
+  },
+];

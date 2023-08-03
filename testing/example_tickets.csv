@@ -1,0 +1,22 @@
+﻿Issue;Status Start;Status end
+ABC-1500;Test Successful;Done
+ABC-1501;Testing;Ready
+ABC-1502;Review;Test Successful
+ABC-1503;Review;Done
+ABC-1504;Review;Done
+ABC-1505;Review;Done
+ABC-1506;Review;Done
+ABC-1507;Doing;Done
+ABC-1508;New;Review
+ABC-1509;Ready;Doing
+ABC-1510;Ready;Doing
+ABC-1511;Ready;Doing
+ABC-1512;Ready;Doing
+ABC-1513;Ready;Ready
+ABC-1514;Ready;Ready
+ABC-1515;Ready;Ready
+ABC-1516;Ready;Closed
+ABC-1517;Doing;Doing
+ABC-1518;Doing;Doing
+ABC-1519;Doing;Doing
+ABC-1520;Doing;Doing

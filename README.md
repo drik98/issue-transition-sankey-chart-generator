@@ -23,6 +23,8 @@ pnpm install
 pnpm run serve
 ```
 
+The files located at [./testing](./testing/) can be used for development/demonstration purposes.
+
 ### Compiles and minifies for production
 
 ```bash

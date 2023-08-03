@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2>Check Imported Data</h2>
+    <span class="info-text">
+      This step is just for validating that the correct file was uploaded.
+    </span>
     <DxDataGrid
       :data-source="data"
       :row-alternation-enabled="true"

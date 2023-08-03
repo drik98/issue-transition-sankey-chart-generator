@@ -1,6 +1,16 @@
 <template>
   <div>
     <h2>Issue Transitions</h2>
+
+    <span class="info-text">
+      In this resulting Sankey chart, the transitions of the imported issues are
+      shown based on the selected columns and order. When hovering over the
+      connections, the IDs of the respective issues are displayed in addition to
+      the start and end status, provided that the corresponding column has been
+      selected. Using the burger menu, the chart can be exported in any desired
+      file format.
+    </span>
+
     <DxSankey
       id="sankey"
       :data-source="data"

@@ -1,6 +1,13 @@
 <template>
   <div class="column-selection dx-fieldset">
     <h2>Select Columns</h2>
+    <span class="info-text">
+      In order to display the transitions of the issues correctly in the chart, you
+      must first select which of the imported columns contains the status at the
+      start and end. In addition, you can select which template contains the
+      issue ID.
+    </span>
+
     <div class="dx-field mandatory">
       <div class="dx-field-label">Status @ Start</div>
       <div class="dx-field-value">

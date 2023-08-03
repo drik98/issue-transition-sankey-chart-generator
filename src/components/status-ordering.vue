@@ -1,6 +1,14 @@
 <template>
   <div>
     <h2>Select the Order of the Issue Status</h2>
+
+    <span class="info-text">
+      In this optional step, you can define the order of the statuses that the
+      issues pass through from start to finish. This can be helpful to better
+      classify how many tickets have already been completed or which ones are
+      still at the beginning. The sorting is done by drag-and-drop.
+    </span>
+
     <DxScrollView id="scroll" direction="vertical" show-scrollbar="always">
       <DxSortable id="list" @drag-start="onDragStart" @reorder="onReorder">
         <template #drag="{ data }">
